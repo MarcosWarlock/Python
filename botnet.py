@@ -1,5 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+#############################################
+# botnet em python 
+# por: Marcos Rodrigues de Carvalho
+# nickname: warlock
+# VOL: www.vivaolinux.com.br/~marcos_warlock 
+#############################################
+
 import socket, os, time
 from re import search
 
