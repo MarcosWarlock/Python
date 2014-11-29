@@ -24,8 +24,8 @@ módulos: <b>socket, os, time, re</b><br>
 	<b>$</b> <i>python2.7 botnet.py</i><br>
 		ou<br>
 	<b>$</b> <i>./botnet.py</i><br>
-3º) Cancelar a execução:
-	$ ^C (Ctrl + c)
+3º) Cancelar a execução:<br>
+	$ ^C (Ctrl + c)<br>
 ***Relatar BUGS*** <br>
 Enviar um E-Mail para:<br>
 	marcosrodriguesdecarvalho@gmail.com<br>
