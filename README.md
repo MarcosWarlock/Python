@@ -34,7 +34,7 @@ Enviar um E-Mail para:<br>
 Como usar as propriedades do bot no irc<br>
 
 1º) Acessar a rede freenode.net<br>
-	<b>/connect</b>freenode.net<br>
+	<b>/connect</b> freenode.net<br>
 2º) Acessar o canal que esta definido do programa<br>
 	<b>/join</b>  #canal<br>
 3º) Realizar a autenticação<br>
