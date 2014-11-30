@@ -39,5 +39,5 @@ Como usar as propriedades do bot no irc<br>
 	<b>/join</b> #testeprogramaboot<br>
 3º) Realizar a autenticação<br>
 	<b>@ligar</b> senha1234<br>
-3º) Executar qualquer comando no servidor que está rodando o botnet<br>
+3º) Executar qualquer comando no servidor que esta rodando o botnet<br>
 	<b>@command</b> clear <br>
