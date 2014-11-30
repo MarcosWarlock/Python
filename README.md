@@ -36,7 +36,7 @@ Como usar as propriedades do bot no irc<br>
 1º) Acessar a rede freenode.net<br>
 	<b>/connect</b> freenode.net<br>
 2º) Acessar o canal que esta definido do programa<br>
-	<b>/join</b>  #canal<br>
+	<b>/join</b> #testeprogramaboot<br>
 3º) Realizar a autenticação<br>
 	<b>@ligar</b> senha1234<br>
 3º) Executar qualquer comando no servidor que esta rodando o botnet<br>
