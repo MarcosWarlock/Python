@@ -11,17 +11,24 @@ import os
 import socket
 from re import search
 def descobre(ip):
-        new = [x for x in ip.split('.')]
+	f = open('data_ON.txt', 'w')
+	g = open('data_OFF.txt', 'w')
+	new = [x for x in ip.split('.')]
 	new.remove(new[len(new)-1])
 	new = ".".join(new) + '.'
-        cmd = 'ping -c1 -w1'
-        for i in range(1,255):
+	cmd = 'ping -c1 -w1'
+	for i in range(1,255):
 		ip = new + str(i)
-	        cmd = 'ping -c1 -w1 ' + ip
+		cmd = 'ping -c1 -w1 ' + ip
 	        r = ''.join(os.popen(cmd).readlines())
-	        if search('1 received', r):
-			print ('[+] HOST ON: ' + ip + ' [+] HOSTNAME : ' + str(socket.gethostbyaddr(str(ip))[0]))
-        
+		if search('1 received', r):
+			print ('[+] HOST ON: ' + ip)
+			f.writelines(str(ip) + '\n')
+		else:
+			print ('[-] HOST OFF: ' + ip)
+			g.writelines(str(ip) + '\n')
+	f.close()
+	g.close()        
 descobre(sys.argv[1])        
 
 # Para usar o programa basta executar:
