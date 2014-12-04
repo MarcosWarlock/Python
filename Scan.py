@@ -23,4 +23,6 @@ def descobre(ip):
 			print ('[+] HOST ON: ' + ip + ' [+] HOSTNAME : ' + str(socket.gethostbyaddr(str(ip))[0]))
         
 descobre(sys.argv[1])        
-  
+
+# Para usar o programa basta executar:
+# python2.7 Scan.py <endereço de ip>
