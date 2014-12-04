@@ -1,5 +1,11 @@
 #!/usr/bin/env python2.7
 # -*- encoding: utf-8 -*-
+##############################################
+# Controlando o arduino via IRC              #
+# por: Marcos Rodrigues de Carvalho          #
+# nickname: warlock                          # 
+# VOL: www.vivaolinux.com.br/~marcos_warlock #
+##############################################
 import socket, time, sys
 from re import search
 from pyfirmata import Arduino
