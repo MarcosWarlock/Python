@@ -1,10 +1,11 @@
 #!/usr/bin/env python3.4
 # -*- coding: utf-8 -*-
-########################################
-# Descobrir todos os ips ativos na rede
+#########################################
+# Descobrir todos os ips ativos na rede 
 # por: Marcos Rodrigues de Carvalho 
 # nickname: warlock
 # IRC: #labmacambira
+#########################################
 
 import GeoIP
 import sys
@@ -27,3 +28,5 @@ def descobre(ip):
 			print ('[-] HOST OFF: ' + ip)
 descobre(sys.argv[1])        
   
+# exemplo
+# python2.7 Scan_teste.py <ip_do_google>
