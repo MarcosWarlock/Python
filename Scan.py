@@ -22,7 +22,7 @@ def descobre(ip):
 		cmd = 'ping -c1 -w1 ' + ip
 	        r = ''.join(os.popen(cmd).readlines())
 		if search('1 received', r):
-			print ('[+] HOST ON: ' + ip)
+			print ('[+] HOST ON : ' + ip)
 			f.writelines(str(ip) + '\n')
 		else:
 			print ('[-] HOST OFF: ' + ip)
