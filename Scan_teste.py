@@ -23,6 +23,7 @@ def descobre(ip):
 	        r = ''.join(os.popen(cmd).readlines())
 	        if search('1 received', r):
 			print ('[+] HOST ON: ' + ip + ' [+] HOSTNAME : ' + str(socket.gethostbyaddr(str(ip))[0]) + ' [+] Country: ' + str(geo.country_code_by_addr(str(ip))))
-        
+       		else:
+			print ('[-] HOST OFF: ' + ip)
 descobre(sys.argv[1])        
   
