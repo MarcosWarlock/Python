@@ -17,7 +17,6 @@ def descobre(ip):
         new = [x for x in ip.split('.')]
 	new.remove(new[len(new)-1])
 	new = ".".join(new) + '.'
-        cmd = 'ping -c1 -w1'
         for i in range(1,255):
 		ip = new + str(i)
 	        cmd = 'ping -c1 -w1 ' + ip
