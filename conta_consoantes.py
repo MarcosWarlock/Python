@@ -3,4 +3,4 @@
 # contador de consoantes
 
 def conta(palavra):
-	return len([x for x in range(len(palavra)) if palavra[x] in 'aeiou'])
+	return len([x for x in range(len(palavra)) if palavra[x] not in 'aeiou'])
