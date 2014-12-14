@@ -4,3 +4,6 @@
 
 def conta(palavra):
 	return len([x for x in range(len(palavra)) if palavra[x] not in 'aeiou'])
+
+# usando lambda
+consoante = lambda palavra: len([x for x in range(len(palavra)) if palavra[x] not in 'aeiou'])
