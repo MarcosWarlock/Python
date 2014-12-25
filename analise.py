@@ -8,7 +8,8 @@ from scapy.all import *
 import socket
 
 def mac(ip):
-    return ARP(pdst=str(ip)).hwsrc
+    a = sr1(ARP(pdst=str(ip)))
+    return a.hwsrc
 
 def so(ip):
     a = sr1(IP(dst=str(ip))/ICMP())
