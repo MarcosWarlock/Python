@@ -5,7 +5,7 @@
 # por: Marcos Rodrigues de Carvalho
 # nickname: warlock
 # VOL: www.vivaolinux.com.br/~marcos_warlock 
-# distribuição Gnu/Linux: Slackware 14.1
+# distribuição Gnu/Linux: Debian
 #############################################
 
 import os
