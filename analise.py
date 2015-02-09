@@ -17,6 +17,8 @@ def so(ip):
         return 'Windows'
     elif a.ttl == 64:
         return 'Linux'
+    else:
+        return 'Outro'
 
 def hostname(ip):
     a = socket.gethostbyaddr(str(ip))
