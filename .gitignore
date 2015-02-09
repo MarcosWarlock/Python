@@ -1,5 +1,4 @@
-teste
-analise.pyc
-data_OFF.txt
-data_ON.txt
+*.pyc
+__pycache__
+__init__.py
 
