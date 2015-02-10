@@ -1,8 +1,16 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-# Download do scapy disponível em [ http://www.secdev.org/projects/scapy/files/scapy-latest.tar.gz ]
-# VOL: http://www.vivaolinux.com.br/~marcos_warlock
 #
+################
+# Dependências
+################
+#
+#########
+# Scapy #
+#########
+#
+# http://www.secdev.org/projects/scapy/files/scapy-latest.tar.gz
+
 
 from scapy.all import *
 import socket
