@@ -6,8 +6,7 @@ from scapy.all import *
 import socket
 
 def mac(ip):
-    a = sr1(ARP(pdst=str(ip)))
-    return a.hwsrc
+    return sr1(ARP(pdst=str(ip))).hwsrc
 
 def so(ip):
     a = sr1(IP(dst=str(ip))/ICMP())
@@ -15,12 +14,19 @@ def so(ip):
 
 
 def hostname(ip):
-    a = socket.gethostbyaddr(str(ip))
-    return a[0]
+    try:
+        return socket.gethostbyaddr(str(ip))[0]
+    except Exception as erro:
+        return erro
 
 def iphost(hostname):
-    return socket.gethostbyname(str(hostname))
+    try:
+        return socket.gethostbyname(str(hostname))
+    except Exception as erro:
+        return erro
 
 def grupo(hostname):
-    return socket.gethostbyname_ex(str(hostname))[0]
-
+    try:
+        return socket.gethostbyname_ex(str(hostname))[0]
+    except Exception as erro:
+        return erro
