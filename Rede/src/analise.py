@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-__autor__ = 'Marcos Rodrigues de Carvalho'
+__author__ = 'Marcos Rodrigues de Carvalho'
 
 from scapy.all import *
 import socket
