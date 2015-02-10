@@ -1,16 +1,6 @@
 #!/usr/bin/env python
 # -*- encoding: utf-8 -*-
-#
-################
-# Dependências
-################
-#
-#########
-# Scapy #
-#########
-#
-# http://www.secdev.org/projects/scapy/files/scapy-latest.tar.gz
-
+__autor__ = 'Marcos Rodrigues de Carvalho'
 
 from scapy.all import *
 import socket
@@ -38,15 +28,3 @@ def iphost(hostname):
 def grupo(hostname):
     return socket.gethostbyname_ex(str(hostname))[0]
 
-'''
-Exemplo de como utilizar o programa:
-
-[1] Abra o python no modo interativo
-ATENÇÂO: Os argumentos de cada função devem ser passados entre " "
-
-[2] Digite o nome da função passando o parametro
-
->>> from analise import *
->>> mac('192.168.0.1') #retorna o endereço mac referente ao ip 192.168.0.1
-'01:02:AC:33:20:11'
-'''
