@@ -11,7 +11,7 @@ def mac(ip):
 
 def so(ip):
     a = sr1(IP(dst=str(ip))/ICMP())
-    return ('Linux' if a.ttl == 64 else 'Windows' if a.ttl == 128 else 'Outro')
+    return ('Linux [tll] --> {t}'.format(t=a.ttl) if a.ttl == 64 else 'Windows [ttl] --> {t}'.format(t=a.ttl) if a.ttl == 128 else 'Outro [ttl] --> {t}'.format(t=a.ttl))
 
 
 def hostname(ip):
