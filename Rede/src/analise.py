@@ -6,11 +6,17 @@ from scapy.all import *
 import socket
 
 def mac(ip):
-    return sr1(ARP(pdst=str(ip))).hwsrc
+    try:
+        return sr1(ARP(pdst=str(ip))).hwsrc
+    except Exception as erro:
+        return erro
 
 def so(ip):
-    a = sr1(IP(dst=str(ip))/ICMP())
-    return ('Linux [ttl] --> {t}'.format(t=a.ttl) if a.ttl == 64 else 'Windows [ttl] --> {t}'.format(t=a.ttl) if a.ttl == 128 else 'Outro [ttl] --> {t}'.format(t=a.ttl))
+    try:
+        a = sr1(IP(dst=str(ip))/ICMP())
+        return ('Linux [ttl] --> {t}'.format(t=a.ttl) if a.ttl == 64 else 'Windows [ttl] --> {t}'.format(t=a.ttl) if a.ttl == 128 else 'Outro [ttl] --> {t}'.format(t=a.ttl))
+    except Exception as erro:
+        return erro
 
 
 def hostname(ip):
