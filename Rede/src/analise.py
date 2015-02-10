@@ -11,12 +11,8 @@ def mac(ip):
 
 def so(ip):
     a = sr1(IP(dst=str(ip))/ICMP())
-    if a.ttl == 128:
-        return 'Windows'
-    elif a.ttl == 64:
-        return 'Linux'
-    else:
-        return 'Outro'
+    return ('Linux' if a.ttl == 64 else 'Windows' if a.ttl == 128 else 'Outro')
+
 
 def hostname(ip):
     a = socket.gethostbyaddr(str(ip))
