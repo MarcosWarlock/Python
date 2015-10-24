@@ -1,34 +1,40 @@
-#!/usr/bin/env python3.4
+#!/usr/bin/env python3.5
 # -*- coding: utf-8 -*-
-########################################
-# Descobrir todos os ips ativos na rede
-# por: Marcos Rodrigues de Carvalho 
-# nickname: warlock
-# IRC: #labmacambira
 
-import sys
 import os
-import socket
 from re import search
-def descobre(ip):
-	f = open('data_ON.txt', 'w')
-	g = open('data_OFF.txt', 'w')
-	new = [x for x in ip.split('.')]
-	new.remove(new[len(new)-1])
-	new = ".".join(new) + '.'
-	for i in range(1,255):
-		ip = new + str(i)
-		cmd = 'ping -c1 -w1 ' + ip
-	        r = ''.join(os.popen(cmd).readlines())
-		if search('1 received', r):
-			print ('[+] HOST ON : ' + ip)
-			f.writelines(str(ip) + '\n')
-		else:
-			print ('[-] HOST OFF: ' + ip)
-			g.writelines(str(ip) + '\n')
-	f.close()
-	g.close()        
-descobre(sys.argv[1])        
 
-# Para usar o programa basta executar:
-# python2.7 Scan.py <endereço de ip>
+ip = str(input('Entre com o endereço de IP: '))
+
+#cria uma lista contendo cada parte do ip
+ip = [x for x in ip.split('.')]
+'''
+ip = [x for x in ip.split('.')] é a mesmo que:
+
+    lista = []
+    for x in ip.split('.'):
+        lista.append(x)
+'''
+
+#remover o ultimo numero do ip
+ip.remove(ip[-1])
+'''
+exemplo:
+    antes  --> ip = ['192', '168', '0', '1']
+                
+                ip.remove(ip[-1])
+
+    depois --> ip = ['192', '168', '0']
+
+'''
+#juntar todos os elementos da lista numa unica string
+ip = '.'.join(ip) + '.'
+
+#gerar numeros de 1 a 254
+for y in range(1,255):
+    n = (ip + str(y))
+    r = ''.join(os.popen('ping -c1 -w1 ' + n).readlines())
+    if search('1 received', r):
+        with open('ip.txt', 'a') as f:
+            f.write('HOST ON [+] ' + n + '\n')
+        print('HOST ON [+] ', n)
